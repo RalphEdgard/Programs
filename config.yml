@@ -5,5 +5,4 @@ detectors:
   cpu1:
     type: cpu
 
-record:
-  enabled: false
+cameras: {}
