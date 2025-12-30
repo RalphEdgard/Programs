@@ -1,8 +1,19 @@
-mqtt:
-  enabled: false
-
-detectors:
-  cpu1:
-    type: cpu
-
-cameras: {}
+cameras:
+  reolink_e1_pro:
+    ffmpeg:
+      inputs:
+        - path: 
+          roles:
+            - record
+        - path: 
+          roles:
+            - detect
+    detect:
+      width: 640
+      height: 480
+      fps: 5
+    record:
+      enabled: true
+      retain:
+        days: 7
+        mode: motion
