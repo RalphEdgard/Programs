@@ -247,7 +247,7 @@ def build_export_url(frigate_url: str, camera: str, start_time: float, clip_seco
 # ----------------------------
 def main() -> int:
     parser = argparse.ArgumentParser(description="Export 10s Frigate event clips to local folder (no DB).")
-    parser.add_argument("--frigate-url", default=env("FRIGATE_URL", ""))
+    parser.add_argument("--frigate-url", default=env("FRIGATE_URL", "CHANGE THIS BECAUSE IT NEEDS THE IP TO GET THE URL"))
     parser.add_argument("--out-dir", default=env("OUT_DIR", "/mnt/frigate/event_clips/clips"))
     parser.add_argument("--camera", default=env("CAMERA_NAME", None))
     parser.add_argument("--label", default=env("LABEL_FILTER", "person"))
